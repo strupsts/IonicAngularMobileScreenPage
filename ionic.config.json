@@ -1,7 +1,0 @@
-{
-  "name": "test-view",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
