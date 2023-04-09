@@ -1,0 +1,56 @@
+.swiper-navigation-btns {
+  margin: 0;
+  position: absolute;
+  top: calc(50% - (66px));
+  width: 104px;
+  height: 76px;
+
+}
+.prev-btn {
+  --border-radius: 0 35px 35px 0;
+  left: -40px;
+  --background: linear-gradient(90deg, rgba(255,236,235,0.55) -93.4%, #fc5b56 30.46%);
+  z-index: 2;
+      ion-icon{
+        position: relative;
+        font-size: 45px;
+        left: 15px;
+      }
+}
+.next-btn {
+  --border-radius: 35px 0 0 35px;
+  right: -40px;
+  --background: linear-gradient(90deg, rgba(255,236,235,0.55) -93.4%, #fc5b56 30.46%);
+  z-index: 2;
+  ion-icon{
+    position: relative;
+    font-size: 45px;
+    right: 15px;
+  }
+}
+.swiper-container {
+  height: 383px;
+  width: 100%
+}
+.slide-container{
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 100%;
+  height: 330px;
+}
+.swiper-pagination {
+  height: 15px
+}
+* {
+
+  --swiper-pagination-color: black;
+  --swiper-pagination-bullet-size: 14px;
+  --swiper-pagination-bullet-width: 15px;
+  --swiper-pagination-bullet-height: 15px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+
+}

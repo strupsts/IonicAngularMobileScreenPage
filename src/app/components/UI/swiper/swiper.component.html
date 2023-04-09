@@ -1,0 +1,20 @@
+<ion-content class="swiper-container">
+
+    <ion-button class="prev-btn swiper-navigation-btns"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    <ion-button class="next-btn swiper-navigation-btns"><ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    <swiper [config]="swiperConfig">
+
+      <ng-template swiperSlide *ngFor="let img of [1,2,3,4,5]">
+
+        <div class="slide-container"
+             style="background-image: url('../../../../assets/images/slider-photo.jfif');"
+        >
+
+        </div>
+      </ng-template>
+
+    </swiper>
+    <div class="swiper-pagination"></div>
+
+
+</ion-content>

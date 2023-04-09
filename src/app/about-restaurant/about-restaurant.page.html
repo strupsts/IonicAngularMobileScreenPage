@@ -1,0 +1,64 @@
+
+  <ion-header [translucent]="true" style="background: white">
+    <ion-toolbar class="toolBar">
+      <div class="header-tools-container">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-title class="ion-text-center"><h1 class="header-title-text">О ресторане</h1> </ion-title>
+        <ion-icon name="share-social"></ion-icon>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-modal-overlay *ngIf="isModal" [cardInfo]="isModal" (closeModalEmit)="isModal = $event"></app-modal-overlay>
+
+  <ion-content [fullscreen]="true" class="content-container" >
+    <app-swiper></app-swiper>
+    <div class="about-wrapper">
+      <div class="box_adress-label" >
+        <ion-text >
+          <h1>
+            {{aboutInfo.adress}}
+          </h1>
+        </ion-text>
+      </div>
+      <div class="box_line"></div>
+      <div class="box_description">
+        <ion-text><h1>{{aboutInfo.descriptionFirstPart}}</h1></ion-text>
+        <div *ngIf="details">
+          <div class="box_description" >
+            <ion-text>
+              <br>
+              <h1>{{aboutInfo.descriptionSecondPart}}</h1>
+              <br>
+              <h1>{{aboutInfo.descriptionThirdPart}}</h1>
+            </ion-text>
+          </div>
+          <div class="box_shedule">
+            <div class="box_shedule_label"><ion-text class="cont-label">Режим работы</ion-text><br></div>
+            <ion-text class="cont-text">С пн до чт с 12:00 до последнего посетителя <br>С пт до вс с 13:00 до 6:00 утра</ion-text>
+          </div>
+          <div class="box_shedule">
+            <div class="box_shedule_label"><ion-text class="cont-label">Телефоны</ion-text><br></div>
+            <ion-text class="cont-text">+7 (812) 712-78-75, +7 (911) 770-93-45</ion-text>
+          </div>
+        </div>
+      </div>
+      <div class="box_details">
+        <ion-text [style]="{color: (details ? 'black' : '#bbbbbb')}"
+                  (click)="toggleDetails()"
+        >{{details ? 'Скрыть' : 'Подробнее'}}</ion-text>
+      </div>
+    <ion-button href="tel:+7-(964)-959-45-32" class="call-btn" shape="round" expand="block">Забронировать</ion-button>
+    <div class="buttons-container">
+      <app-button-card (click)="openModal(card)" class="card-btn" *ngFor="let card of aboutButtonsArr" [btn]="card"></app-button-card>
+    </div>
+    </div>
+  </ion-content>
+
+
+
+
+
+
+
+
