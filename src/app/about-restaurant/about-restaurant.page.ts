@@ -49,7 +49,11 @@ export class AboutRestaurantPage implements OnInit {
   details:boolean = false
   constructor() {
   }
-
+  closeModal() {
+    if(this.isModal){
+      this.isModal = false
+    }
+  }
   toggleDetails(){
     this.details = !this.details
   }

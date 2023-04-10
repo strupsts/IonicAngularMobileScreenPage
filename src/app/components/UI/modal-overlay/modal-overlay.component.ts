@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ICardButton} from "../../../shared/interfaces";
+import {Platform} from "@ionic/angular";
 
 @Component({
   standalone: true,
@@ -15,7 +16,11 @@ export class ModalOverlayComponent  implements OnInit {
     bg: 'empy'
   }
   @Output() closeModalEmit = new EventEmitter()
-  constructor() { }
+  constructor(private platform: Platform) {
+    platform.backButton.subscribeWithPriority(10,()=>{
+      this.closeModal()
+    })
+  }
   closeModal() {
     this.closeModalEmit.emit(false)
   }

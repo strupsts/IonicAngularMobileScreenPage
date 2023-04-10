@@ -58,3 +58,28 @@
     height: 8rem;
   }
 }
+@media(max-width: 347px){
+  .card-button {
+    border-radius: 1.1rem;
+    width: 9.2rem;
+    height: 9.2rem;
+  }
+  .card-button_content ion-text{
+    font-size: 0.8rem
+  }
+  .card-button_content ion-icon{
+    font-size: 3rem
+  }
+}
+@media(max-width: 337px){
+  .card-button {
+    width: 8.5rem;
+    height: 8.5rem;
+  }
+}
+@media(max-width: 320px){
+  .card-button {
+    width: 8rem;
+    height: 8rem;
+  }
+}
